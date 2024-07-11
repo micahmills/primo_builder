@@ -144,6 +144,10 @@ export const languages = [
 		name: 'Arabic'
 	},
 	{
+		key: 'bal',
+		name: 'Balochi'
+	},
+	{
 		key: 'be',
 		name: 'Belarusian'
 	},

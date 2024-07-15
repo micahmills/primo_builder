@@ -145,7 +145,7 @@ export const languages = [
 	},
 	{
 		key: 'bal',
-		name: 'Balochi'
+		name: 'Baluchi'
 	},
 	{
 		key: 'be',

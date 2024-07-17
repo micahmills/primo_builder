@@ -112,7 +112,7 @@ export async function buildStaticPage({
 
 	const final = `\
   <!DOCTYPE html>
-  <html lang="${locale}" dir="${direction}>
+  <html lang="${locale}" dir="${direction}">
     <head>
       <meta name="generator" content="Primo" />
       ${res.head}

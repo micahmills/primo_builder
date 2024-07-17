@@ -361,3 +361,8 @@ function createUniqueID(length = 5) {
 	const nanoid = customAlphabet('abcdefghijklmnopqrstuvwxyz', length)
 	return nanoid()
 }
+
+export const Language_Name = (language) => {
+	const lang = languages.find((l) => l.key === language)
+	return lang ? lang.name : language
+}

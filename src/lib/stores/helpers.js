@@ -106,7 +106,7 @@ export async function buildStaticPage({
 		locale
 	})
 
-	if (locale === 'ar' | locale === 'he' | locale === 'fa' | locale === 'ur' | locale === 'bal') { 
+	if (locale === 'ar' || locale === 'he' || locale === 'fa' || locale === 'ur' || locale === 'bal') { 
 		direction = 'rtl'
 	}
 

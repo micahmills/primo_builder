@@ -14,6 +14,8 @@ export const onMobile = !import.meta.env.SSR ? writable(/Android|webOS|iPhone|iP
 
 export const locale = writable('en')
 
+export const dir = writable('ltr')
+
 export const highlightedElement = writable(null)
 
 export const locked_blocks = writable([])

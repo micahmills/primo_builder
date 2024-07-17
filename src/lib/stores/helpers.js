@@ -45,6 +45,7 @@ export async function buildStaticPage({
 	page_sections = get(sections),
 	page_symbols = get(symbols),
 	locale = 'en',
+	direction = 'ltr',
 	no_js = false
 }) {
 	const hydratable_symbols_on_page = page_symbols.filter(
@@ -105,9 +106,13 @@ export async function buildStaticPage({
 		locale
 	})
 
+	if (locale === 'ar' | locale === 'he' | locale === 'fa' | locale === 'ur' | locale === 'bal') { 
+		direction = 'rtl'
+	}
+
 	const final = `\
   <!DOCTYPE html>
-  <html lang="${locale}">
+  <html lang="${locale}" dir="${direction}>
     <head>
       <meta name="generator" content="Primo" />
       ${res.head}

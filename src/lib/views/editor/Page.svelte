@@ -33,6 +33,18 @@
 	let html_head = ''
 	let html_below = ''
 
+	if (
+      locale === 'ar' ||
+      locale === 'he' ||
+      locale === 'fa' ||
+      locale === 'ur' ||
+      locale === 'bal'
+    ) {
+      let direction = 'rtl'
+    } else {
+	  let direction = 'ltr'
+	}
+
 	$: set_page_content(page)
 	set_page_content(page)
 	async function set_page_content(page_data) {
@@ -316,6 +328,7 @@
 	bind:this={page_el}
 	class:fadein={page_mounted}
 	lang={$locale}
+	dir={direction}
 	use:dndzone={{
 		items: draggable_sections,
 		flipDurationMs,

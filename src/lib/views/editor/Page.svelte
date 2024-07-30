@@ -11,7 +11,7 @@
 	import { isEqual, cloneDeep } from 'lodash-es'
 	import Spinner from '../../ui/misc/Spinner.svelte'
 	import { code as siteCode } from '../../stores/data/site'
-	import { locale, locked_blocks, showingIDE } from '../../stores/app/misc'
+	import { locale, writingDirection, locked_blocks, showingIDE } from '../../stores/app/misc'
 	import { active_page } from '../../stores/actions'
 	import modal from '../../stores/app/modal'
 	import {
@@ -329,6 +329,7 @@
 	class:fadein={page_mounted}
 	lang={$locale}
 	dir={direction}
+	dir={$writingDirection}
 	use:dndzone={{
 		items: draggable_sections,
 		flipDurationMs,

@@ -1,4 +1,4 @@
-import {writable} from 'svelte/store'
+import {derived, writable} from 'svelte/store'
 
 export const saved = writable(true)
 
@@ -14,7 +14,16 @@ export const onMobile = !import.meta.env.SSR ? writable(/Android|webOS|iPhone|iP
 
 export const locale = writable('en')
 
-export const dir = writable('ltr')
+export const writingDirection = derived(
+    locale, 
+    $locale => (
+        $locale === 'ar' || 
+        $locale === 'he' || 
+        $locale === 'fa' ||
+        $locale === 'ur' ||
+        $locale === 'bal'
+    ) ? 'rtl' : 'ltr'
+)
 
 export const highlightedElement = writable(null)
 

@@ -22,7 +22,7 @@
 	import { autoRefresh } from '../../../components/misc/CodePreview.svelte'
 
 	import { processCode, processCSS, wrapInStyleTags } from '../../../utils'
-	import { locale, onMobile } from '../../../stores/app/misc'
+	import { locale, writingDirection, onMobile } from '../../../stores/app/misc'
 
 	import * as actions from '../../../stores/actions'
 	import { content, code as siteCode } from '../../../stores/data/site'
@@ -299,7 +299,7 @@
 		bind:bottomPaneSize={$bottomPaneSize}
 		hideRightPanel={$onMobile}
 	>
-		<div slot="left" lang={$locale}>
+		<div slot="left" lang={$locale} dir={$writingDirection}>
 			{#if tab === 'code'}
 				<FullCodeEditor
 					bind:html={raw_html}

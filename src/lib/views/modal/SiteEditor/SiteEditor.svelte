@@ -20,7 +20,7 @@
 	import GenericFields from '../../../components/GenericFields.svelte'
 	import { autoRefresh } from '../../../components/misc/CodePreview.svelte'
 	import { buildStaticPage } from '../../../stores/helpers'
-	import { locale, onMobile } from '../../../stores/app/misc'
+	import { locale, writingDirection, onMobile } from '../../../stores/app/misc'
 	import { modal } from '../../../stores/app'
 	import { active_site } from '../../../stores/actions'
 	import site, {
@@ -298,7 +298,7 @@
 		hideRightPanel={$onMobile}
 		hideLeftOverflow={$showingIDE && $activeTab === 0}
 	>
-		<div slot="left" lang={$locale}>
+		<div slot="left" lang={$locale} dir={$writingDirection}>
 			{#if $activeTab === 'code'}
 				<FullCodeEditor
 					bind:html={rawHTML}

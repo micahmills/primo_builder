@@ -1,6 +1,6 @@
 {
 	"name": "@centralasiade/builder",
-	"version": "0.1.73",
+	"version": "0.1.75-beta.11",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",

@@ -240,7 +240,7 @@
 		{/if}
 	</div>
 
-	<div slot="toggle">
+	<div slot="language-independant-toggle">
 			<Toggle
 				label="Language Independent"
 				toggled={field.is_language_independent}

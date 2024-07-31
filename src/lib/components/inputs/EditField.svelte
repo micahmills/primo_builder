@@ -100,6 +100,7 @@
 		{#if top_level && !minimal}
 			<div class="toggle">
 				<slot name="toggle" />
+				<slot name="language-independant-toggle" />
 			</div>
 		{/if}
 

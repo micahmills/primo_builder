@@ -74,7 +74,7 @@
 	// local copy of component content to modify & save
 	let local_content = get_local_content()
 	function get_local_content() {
-		let combined_content = symbol.content
+		let combined_content = component.content
 		symbol.fields.forEach((field) => {
 			if (field.is_static) {
 				const value = symbol.content[$locale][field.key]

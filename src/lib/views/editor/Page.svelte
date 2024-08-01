@@ -328,7 +328,6 @@
 	bind:this={page_el}
 	class:fadein={page_mounted}
 	lang={$locale}
-	dir={direction}
 	dir={$writingDirection}
 	use:dndzone={{
 		items: draggable_sections,

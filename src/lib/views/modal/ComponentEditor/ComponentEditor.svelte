@@ -74,7 +74,7 @@
 	// local copy of component content to modify & save
 	let local_content = get_local_content()
 	function get_local_content() {
-		let combined_content = symbol.content
+		let combined_content = component.content
 		symbol.fields.forEach((field) => {
 			if (field.is_static) {
 				const value = symbol.content[$locale][field.key]
@@ -131,7 +131,7 @@
 	$: syncLocales($content)
 
 	async function syncFieldKeys(fields) {
-		const updated_local_content = _.cloneDeep(local_content)
+		const updated_local_content = _.cloneDeep(local_content);
 		removeNonexistantKeys() // delete keys from content that do not appear in fields
 		addMissingKeys() // add keys that do appear in fields
 		local_content = updated_local_content

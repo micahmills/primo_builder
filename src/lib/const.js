@@ -164,6 +164,10 @@ export const languages = [
 		name: 'Catalan'
 	},
 	{
+		key: 'ce',
+		name: 'Chechen'
+	},
+	{
 		key: 'cs',
 		name: 'Czech'
 	},
@@ -314,6 +318,10 @@ export const languages = [
 	{
 		key: 'sv',
 		name: 'Swedish'
+	},
+	{
+		key: "tg",
+		name: "Tajiki"
 	},
 	{
 		key: 'th',
